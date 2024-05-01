@@ -27,13 +27,13 @@ public:
 			vShaderFile.open(vertexPath);
 			fShaderFIle.open(fragmentPath);
 			std::stringstream vShaderStream, fShaderStream;  
-			vShaderStream << vShaderFile.rdbuf();   // stores the contents of the file into the stream object
+			vShaderStream << vShaderFile.rdbuf();   // stores the contents of the file into the stream object 
 			fShaderStream << fShaderFIle.rdbuf(); 
 			vShaderFile.close();
 			fShaderFIle.close();
 
 			// convert stream into string
-			vertexCode = vShaderStream.str();  
+			vertexCode = vShaderStream.str();
 			fragmentCode = fShaderStream.str();
 		}
 		catch (std::ifstream::failure e) {
